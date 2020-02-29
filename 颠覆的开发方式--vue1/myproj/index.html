@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #app {
+        text-align: center;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 30px auto;
+      }
+      table tr {
+        height: 40px;
+        line-height: 40px;
+      }
+      table th,
+      table td {
+        border: 1px solid #ccc;
+      }
+
+      .dark thead tr{
+        background: darkblue;
+        color: #fff;
+      }
+
+      .dark tbody tr:nth-child(even){
+        background: lightblue;
+      }
+
+      .dark tbody tr:nth-child(odd){
+        background: rgb(205, 227, 235);
+      }
+
+      .dark tfoot tr{
+        background: rgb(1, 1, 182);
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <h1>商品和库存管理</h1>
+      <p>共 <strong>{{products.length}}</strong> 件商品</p>
+      <button @click="isDark=!isDark">切换表格样式</button>
+      <table :class="isDark?'dark':''">
+        <thead>
+          <tr>
+            <th>商品名称</th>
+            <th>商品库存</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(item, index) in products" :key="index">
+            <td>{{item.name}}</td>
+            <td>
+              <button @click="decrease(item)">-</button>
+              {{item.stock}}
+              <button @click="increase(item)">+</button>
+            </td>
+            <td>
+              <button @click="products.splice(index, 1)">删除</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input
+                type="text"
+                @keydown.enter="add"
+                v-model="newProduct.name"
+              />
+            </td>
+            <td>
+              <input
+                type="number"
+                @keydown.enter="add"
+                v-model.number="newProduct.stock"
+              />
+            </td>
+            <td>
+              <button @click="add">添加</button>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>总计</td>
+            <td>{{totalStock}}</td>
+            <td></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: {
+          products: [
+            { name: "小米手机", stock: 10 },
+            { name: "华为手机", stock: 5 },
+            { name: "iphone", stock: 6 }
+          ],
+          isDark: false,
+          newProduct: { name: "", stock: 0 } //新产品
+        },
+        computed: {
+          totalStock() {
+            //总库存
+            var sum = 0;
+            for (var i = 0; i < this.products.length; i++) {
+              var prod = this.products[i];
+              sum += prod.stock;
+            }
+            return sum;
+          }
+        },
+        methods: {
+          increase(item) {
+            item.stock++;
+          },
+          decrease(item) {
+            if (item.stock <= 0) {
+              return;
+            }
+            item.stock--;
+          },
+          add() {
+            this.products.push(this.newProduct);
+            this.newProduct = {
+              name: "",
+              stock: 0
+            };
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

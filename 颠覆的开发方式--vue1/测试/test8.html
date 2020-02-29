@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <h2>分数：{{score}}</h2>
+      <p v-show="score<60">不及格</p>
+      <p v-show="score<80 && score>=60">及格</p>
+      <p v-show="score>=90">优秀</p>
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: {
+          score: 60
+        }
+      });
+    </script>
+  </body>
+</html>

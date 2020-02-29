@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>asdfasdf</h1>
+      <h2>asdfasdfasdsada</h2>
+      <p>
+        {{1+2}}, {{a+3}}
+      </p>
+      <p>
+        {{nums.length}}
+      </p>
+    </div>
+
+    <button onclick="app.a++">加1</button>
+    <script src="./vue.js"></script>
+    <script>
+      // app：vue的实例
+      var app = new Vue({
+        // vue实例配置
+        el: "#app", // #app css选择器
+        data: {
+          a: 1,
+          nums: [1, 3, 4]
+        }
+      });
+    </script>
+  </body>
+</html>

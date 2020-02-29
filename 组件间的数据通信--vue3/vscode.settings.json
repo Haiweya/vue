@@ -1,0 +1,87 @@
+{
+  "git.ignoreMissingGitWarning": true,
+  "files.associations": {
+      "*.cjson": "jsonc",
+      "*.wxss": "css",
+      "*.wxs": "javascript",
+      "*.config": "json"
+  },
+  "emmet.includeLanguages": {
+      "wxml": "html",
+      "javascript": "javascriptreact"
+  },
+  "minapp-vscode.disableAutoConfig": true,
+  "editor.formatOnSave": false,
+  "php.suggest.basic": false,
+  "vetur.format.defaultFormatter.html": "js-beautify-html",
+  "php.validate.executablePath": "D:/software/xampp/php/php.exe",
+  "editor.minimap.enabled": false,
+  "emmet.triggerExpansionOnTab": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "explorer.confirmDelete": false,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.port": 5501,
+  "git.enableSmartCommit": true,
+  "git.autofetch": true,
+  "files.eol": "\n",
+  "editor.suggestSelection": "first",
+  "terminal.integrated.rendererType": "dom",
+  "pasteImage.path": "${currentFileDir}/assets",
+  "files.autoSave": "off",
+  "vetur.format.options.tabSize": 4,
+  "editor.tabCompletion": "on",
+  "vetur.format.options.useTabs": true,
+  "editor.detectIndentation": false,
+  "beautify.config":{
+      "tab_size":4
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "workbench.tree.indent": 20,
+  "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+      "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+      "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "[markdown]": {
+      "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "workbench.statusBar.visible": true,
+  "workbench.activityBar.visible": true,
+  "window.menuBarVisibility": "default",
+  "[typescriptreact]": {
+      "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[css]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "markdown.preview.fontSize": 16,
+  "markdown-preview-enhanced.mermaidTheme": "default",
+  "editor.fontFamily": "consolas,'Noto Sans S Chinese'",
+  "editor.fontSize": 16,
+  "markdown-preview-enhanced.codeBlockTheme": "github.css",
+  "window.zoomLevel": 2,
+  "workbench.iconTheme": "vscode-icons",
+  "breadcrumbs.enabled": true,
+  "editor.renderControlCharacters": false,
+  "workbench.sideBar.location": "left",
+  "vsicons.dontShowNewVersionMessage": true,
+  "explorer.compactFolders": false,
+  "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+  "markdown.preview.fontFamily": "consolas,'Noto Sans S Chinese'",
+  "markdown-preview-enhanced.printBackground": true,
+  "markdown-preview-enhanced.frontMatterRenderingOption": "table",
+  "markdown-preview-enhanced.enableScriptExecution": true,
+  "postcss.validate": false,
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on"
+}

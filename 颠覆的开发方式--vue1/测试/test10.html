@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <ul>
+        <li v-for="(item, index) in nums" :key="index">
+          {{index}}, {{item}}
+        </li>
+      </ul>
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: {
+          nums: [565, 3, 2, 34, 43, 65, 7]
+        }
+      });
+    </script>
+  </body>
+</html>

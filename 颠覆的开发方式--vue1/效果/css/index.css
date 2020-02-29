@@ -1,0 +1,43 @@
+table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+.stock {
+  display: inline-block;
+  width: 100px;
+}
+
+table tr {
+  height: 40px;
+}
+
+table td,
+table th {
+  border: 2px solid #ccc;
+}
+
+input {
+  text-align: center;
+  font-size: 1em;
+}
+
+/* 美化样式 */
+.beauty-table thead tr {
+  background: #18647a;
+  color: #fff;
+}
+
+.beauty-table tbody tr:nth-child(odd) {
+  background: #c6d9df;
+}
+
+.beauty-table tbody tr:nth-child(even) {
+  background: #e7fffe;
+}
+
+.beauty-table tfoot tr {
+  background: #035068;
+  color: #fff;
+}

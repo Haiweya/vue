@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <button @click="reduce">减</button>
+      <strong>{{n}}</strong>
+      <button @click="add($event)">增</button>
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: {
+          n: 0
+        },
+        methods: {
+          add(e) { //该函数最终是通过app调用的
+            // 该函数this指向app
+            this.n++;
+            console.log("数据增加了", e);
+          },
+          reduce(e){
+            this.n--;
+            console.log("数据减少了", e);
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

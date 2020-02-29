@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var obj1 = { a: 1, b: 2 };
+      var obj2 = {};
+      //向obj2中定义一个属性a
+      Object.defineProperty(obj2, "a", {
+        //关于属性的配置
+        get: function() { //凡是读取a的时候，调用该函数，函数的返回结果即是属性的值
+          console.log("obj2的属性a被读取了") //读属性时可以收到通知
+          return obj1.a;
+        },
+        set: function(val){
+          console.log("快来人啦，有人想改属性a")
+          obj1.a = val;
+        }
+      });
+     
+    </script>
+  </body>
+</html>

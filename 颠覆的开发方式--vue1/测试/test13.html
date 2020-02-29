@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <p>
+        firstName: {{firstName}}
+      </p>
+      <p>
+        lastName : {{lastName}}
+      </p>
+      <p>
+        fullName: {{fullName}}
+      </p>
+      <p>
+        fullName: {{fullName}}
+      </p>
+      <p>
+        fullName: {{fullName}}
+      </p>
+      <p>
+        fullName: {{fullName}}
+      </p>
+      <p>
+        fullName: {{fullName}}
+      </p>
+      <p>
+        fullName: {{fullName}}
+      </p>
+      <p>
+        fullName: {{fullName}}
+      </p>
+      <p>
+        fullName: {{fullName}}
+      </p>
+      <p>
+        fullName: {{fullName}}
+      </p>
+      <p>
+        fullName: {{fullName}}
+      </p>
+      <p>
+        fullName: {{fullName}}
+      </p>
+      <p>
+        fullName: {{fullName}}
+      </p>
+      <p>
+        fullName: {{fullName}}
+      </p>
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: {
+          firstName: "姬",
+          lastName: "成"
+        },
+        computed: {
+          // 计算属性fullName
+          // 当读取fullName时，会调用该方法得到结果
+          fullName: {
+            get() {
+              console.log("计算属性重新计算了！");
+              // 经过vue分析，vue知道该计算属性依赖于 firstName  lastName
+              return this.firstName + this.lastName;
+            },
+            set(val){
+              this.firstName = val[0];
+              this.lastName = val.substr(1);
+            }
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

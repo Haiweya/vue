@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      {{title}}， {{address.city}}
+      <p>
+        数组长度：{{numbers.length}}
+      </p>
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+      // app：vue的实例
+      var app = new Vue({
+        // vue实例配置
+        el: "#app", // #app css选择器
+        data: {
+          title: "商品和库存管理",
+          numbers: [1, 2, 34],
+          address: {
+            province: "四川",
+            city: "成都"
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
